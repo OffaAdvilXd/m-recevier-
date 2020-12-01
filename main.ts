@@ -1,11 +1,9 @@
-radio.onReceivedNumber(function (receivedNumber) {
+radio.onReceivedValue(function (name, value) {
     led.toggle(4, 4)
-    serial.writeValue("x", receivedNumber)
+    serial.writeValue(name, value)
 })
-basic.showString("m-recevier")
+basic.showString("Full Receiver")
 radio.setGroup(24)
-serial.writeLine("Acceleration")
-serial.writeLine("Direction")
 basic.forever(function () {
 	
 })
